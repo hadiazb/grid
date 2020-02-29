@@ -10,7 +10,7 @@ body{
   display: grid;
   /* grid-template-columns: 25% 50% 25%; */
   /* grid-template-rows: 80px 120px 100px 150px; */
-  grid-template: 80px 120px 100px 70px / 25% 50% 25%
+  grid-template: 80px 60px 100px 70px / 25% 50% 25%
   /* grid-column-gap: 10px; */
   /* grid-row-gap: 10px; */
   /* grid-gap: 10px 5px */
@@ -20,4 +20,14 @@ body{
   border: 1px solid red;
   padding: 10px;
   text-align: center;
+}
+.item:nth-of-type(4){
+  background-color: rgb(101, 140, 241);
+  overflow: auto;
+  /* display: subgrid; */
+  display: grid;
+  grid-template: 50px 50px 50px / 50px 50px 50px;
+}
+.item .item{
+  background-color: rgb(186, 21, 223);
 }
