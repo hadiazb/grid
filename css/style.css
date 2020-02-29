@@ -8,12 +8,11 @@ body{
 }
 .container{
   display: grid;
-  grid-template: 100px 1fr 100px/ 200px 1fr;
-  grid-gap: 10px;
-  height: 100vh;
-  grid-template-areas: "header header"
-                       "left content"
-                       "footer footer";
+  grid-template: repeat(2, 1fr) / repeat(7, 1fr);
+  grid-gap: 1px;
+  height: 50vh;
+  grid-template-areas: "uno uno uno dos dos tres tres"
+                       "uno uno uno dos dos cuadro cinco";
 }
 .item{
   background-color: lightblue;
@@ -21,15 +20,23 @@ body{
   padding: 10px;
   text-align: center;
 }
-.header{
-  grid-area: header;
+.uno{
+  grid-area: uno;
+  background-color: rgb(0, 255, 47);
 }
-.left{
-  grid-area: left;
+.dos{
+  grid-area: dos;
+  background-color: rgb(255, 210, 0);
 }
-.content{
-  grid-area: content;
+.tres{
+  grid-area: tres;
+  background-color: rgb(111, 0, 255);
 }
-.footer{
-  grid-area: footer;
+.cuatro{
+  grid-area: cuadro;
+  background-color: rgb(255, 0, 222);
+}
+.cinco{
+  grid-area: cinco;
+  background-color: rgb(255, 158, 0);
 }
