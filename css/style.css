@@ -8,11 +8,9 @@ body{
 }
 .container{
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(7, 1fr);
-  grid-gap: 1px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   height: 50vh;
-  grid-template-areas: "uno uno uno dos dos tres tres"
-                       "uno uno uno dos dos cuadro cinco";
 }
 .item{
   background-color: lightblue;
@@ -20,23 +18,46 @@ body{
   padding: 10px;
   text-align: center;
 }
-.uno{
-  grid-area: uno;
-  background-color: rgb(0, 255, 47);
+.item:nth-of-type(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  background-image: url(../images/img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.dos{
-  grid-area: dos;
-  background-color: rgb(255, 210, 0);
+.item:nth-of-type(2) {
+  grid-column: 4 / 6;
+  grid-row: 1 / 3;
+
+  background-image: url(../images/img2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.tres{
-  grid-area: tres;
-  background-color: rgb(111, 0, 255);
+.item:nth-of-type(3) {
+  grid-column: 6 / 8;
+  grid-row: 1 /  2;
+
+  background-image: url(../images/img3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.cuatro{
-  grid-area: cuadro;
-  background-color: rgb(255, 0, 222);
+.item:nth-of-type(4) {
+
+  background-image: url(../images/img4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.cinco{
-  grid-area: cinco;
-  background-color: rgb(255, 158, 0);
+.item:nth-of-type(5) {
+
+  background-image: url(../images/img5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
